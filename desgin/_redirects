@@ -5,4 +5,4 @@
 /contact-us /contact.html 301
 
 # Redirect all 404s to index.html (useful for SPA)
-/* /home.html 200
+/* /index.html 200
