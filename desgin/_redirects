@@ -1,0 +1,8 @@
+# Redirect /home to /
+/home / 301
+
+# Redirect /contact-us to /contact.html
+/contact-us /contact.html 301
+
+# Redirect all 404s to index.html (useful for SPA)
+/* /index.html 200
