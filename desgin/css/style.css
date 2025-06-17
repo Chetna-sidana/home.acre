@@ -933,6 +933,53 @@ section{
 
 
 /* media queries  */
+/* ====== SEARCH FUNCTIONALITY STYLES ====== */
+/* Add these right before your @media queries */
+
+.search-container {
+   margin: 20px auto;
+   max-width: 600px;
+   display: flex;
+   gap: 10px;
+   padding: 0 20px;
+ }
+ 
+ #location-search {
+   flex-grow: 1;
+   padding: 10px 15px;
+   border: var(--border);
+   border-radius: 5px;
+   font-size: 1.6rem;
+   color: var(--black);
+   background-color: var(--white);
+ }
+ 
+ #search-btn, #reset-btn {
+   padding: 10px 15px;
+   background-color: var(--main-color);
+   color: var(--white);
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.6rem;
+   text-transform: capitalize;
+ }
+ 
+ #search-btn:hover, #reset-btn:hover {
+   background-color: var(--black);
+ }
+ 
+ .no-results-msg {
+   text-align: center;
+   padding: 20px;
+   font-size: 1.8rem;
+   width: 100%;
+   color: var(--light-color);
+   grid-column: 1 / -1;
+ }
+ 
+ /* ====== END OF SEARCH STYLES ====== */
+ /* Your existing media queries continue below... */
 
 @media (max-width:991px){
 

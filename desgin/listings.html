@@ -5,354 +5,251 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>All Listings</title>
-
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+   <style>
+      .search-container {
+         margin: 20px auto;
+         max-width: 600px;
+         display: flex;
+         gap: 10px;
+         padding: 0 20px;
+      }
+      #location-search {
+         flex-grow: 1;
+         padding: 10px 15px;
+         border: var(--border);
+         border-radius: 5px;
+         font-size: 1.6rem;
+      }
+      #search-btn, #reset-btn {
+         padding: 10px 15px;
+         background-color: var(--main-color);
+         color: var(--white);
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 1.6rem;
+      }
+      #search-btn:hover, #reset-btn:hover {
+         background-color: var(--black);
+      }
+      .no-results {
+         text-align: center;
+         padding: 20px;
+         font-size: 1.8rem;
+         color: var(--light-color);
+         grid-column: 1 / -1;
+      }
+   </style>
 </head>
 <body>
    
-<!-- header section starts  -->
-
-<header class="header">
-
-   <nav class="navbar nav-1">
-      <section class="flex">
-         <a href="home.html" class="logo"><i class="fas fa-house"></i>MyHome</a>
-
-         <ul>
-            <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
-         </ul>
-      </section>
-   </nav>
-
-   <nav class="navbar nav-2">
-      <section class="flex">
-         <div id="menu-btn" class="fas fa-bars"></div>
-
-         <div class="menu">
-            <ul>
-               <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="#">house</a></li>
-                     <li><a href="#">flat</a></li>
-                     <li><a href="#">shop</a></li>
-                     <li><a href="#">ready to move</a></li>
-                     <li><a href="#">furnished</a></li>
-                  </ul>
-               </li>
-               <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="#">post property</a></li>
-                     <li><a href="#">dashboard</a></li>
-                  </ul>
-               </li>
-               <li><a href="#">rent</a>
-                  <ul>
-                     <li><a href="#">house</a></li>
-                     <li><a href="#">flat</a></li>
-                     <li><a href="#">shop</a></li>
-                  </ul>
-               </li>
-               <li><a href="#">help<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="about.html">about us</a></i></li>
-                     <li><a href="contact.html">contact us</a></i></li>
-                     <li><a href="contact.html#faq">FAQ</a></i></li>
-                  </ul>
-               </li>
-            </ul>
-         </div>
-
-         <ul>
-            <li><a href="#">saved <i class="far fa-heart"></i></a></li>
-            <li><a href="#">account <i class="fas fa-angle-down"></i></a>
-               <ul>
-                  <li><a href="login.html">login</a></li>
-                  <li><a href="register.html">register</a></li>
-               </ul>
-            </li>
-         </ul>
-      </section>
-   </nav>
-
-</header>
-
-<!-- header section ends -->
-
-<!-- listings section starts  -->
+<!-- Your existing header content -->
 
 <section class="listings">
-
    <h1 class="heading">all listings</h1>
-
-   <div class="box-container">
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>house</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-1.webp" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-         <div class="map" style="height: 200px; margin-top: 10px;"></div>
-
-         <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-2.webp" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-         <div class="map" style="height: 200px; margin-top: 10px;"></div>
-
-         <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-3.jpg" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-         <div class="map" style="height: 200px; margin-top: 10px;"></div>
-<div class="flex"> 
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-4.webp" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location">
-            <i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-            <div class="map" style="height: 200px; margin-top: 10px;"></div>
-         <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-5.webp" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-         <div class="map" style="height: 200px; margin-top: 10px;"></div>
-<div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="images/house-img-6.webp" alt="">
-         </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
-         <div class="map" style="height: 200px; margin-top: 10px;"></div>
-         <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
-         </div>
-         <a href="view_property.html" class="btn">view property</a>
-      </div>
-
+   <div class="search-container">
+      <input type="text" id="location-search" placeholder="Search by city (e.g., Delhi, Pune)">
+      <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+      <button id="reset-btn"><i class="fas fa-times"></i> Reset</button>
    </div>
-
+   <div class="box-container" id="box-container"></div>
 </section>
 
-<!-- listings section ends -->
+<!-- Your existing footer content -->
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-
-<footer class="footer">
-
-   <section class="flex">
-
-      <div class="box">
-         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
-         <a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
-         <a href="mailto:shaikhanas@gmail.com"><i class="fas fa-envelope"></i><span>shaikhanas@gmail.com</span></a>
-         <a href="#"><i class="fas fa-map-marker-alt"></i><span>mumbai, india - 400104</span></a>
-      </div>
-
-      <div class="box">
-         <a href="home.html"><span>home</span></a>
-         <a href="about.html"><span>about</span></a>
-         <a href="contact.html"><span>contact</span></a>
-         <a href="listings.html"><span>all listings</span></a>
-         <a href="#"><span>saved properties</span></a>
-      </div>
-
-      <div class="box">
-         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
-         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
-         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
-         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
-
-      </div>
-
-   </section>
-
-   <div class="credit">&copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!</div>
-
-</footer>
-
-<!-- footer section ends -->
-
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-   document.querySelectorAll('.box').forEach((box, index) => {
-      const addressText = box.querySelector('.location span').innerText;
-      const mapDiv = box.querySelector('.map');
-   
-      if (!mapDiv) return;
-   
-      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(addressText)}`, {
-         headers: {
-            'User-Agent': 'MyHomeApp/1.0'
+   // Firebase Configuration
+   const firebaseConfig = {
+      apiKey: "AIzaSyC_KB-fCEA8QQqmDUj2y88Adfr8kx-SgPg",
+      authDomain: "login-page-66094.firebaseapp.com",
+      projectId: "login-page-66094",
+      storageBucket: "login-page-66094.appspot.com",
+      messagingSenderId: "173329262844",
+      appId: "1:173329262844:web:c25c32cd33a5c1de9f8f79",
+      measurementId: "G-973G312R99"
+   };
+
+   if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+   }
+
+   const db = firebase.firestore();
+   const auth = firebase.auth();
+
+   // Image handling - will use placeholder if local images don't exist
+   function getPropertyImage() {
+      const imgNumber = Math.floor(Math.random() * 6) + 1;
+      const img = new Image();
+      img.src = `images/house-img-${imgNumber}.webp`;
+      return new Promise((resolve) => {
+         img.onerror = () => resolve('https://via.placeholder.com/400x300?text=Property+Image');
+         img.onload = () => resolve(img.src);
+      });
+   }
+
+   async function createPropertyBox(addrData, city, addrDoc) {
+      const { area, pincode, coordinates } = addrData;
+      const imgSrc = await getPropertyImage();
+
+      const box = document.createElement('div');
+      box.className = 'box';
+      box.innerHTML = `
+         <div class="admin">
+            <h3>${area[0].toUpperCase()}</h3>
+            <div>
+               <p>Property Owner</p>
+               <span>10-11-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+            <p class="type"><span>flat</span><span>sale</span></p>
+            <form action="" method="post" class="save">
+               <button type="submit" name="save" class="far fa-heart"></button>
+            </form>
+            <img src="${imgSrc}" alt="Property Image">
+         </div>
+         <h3 class="name">${area} Residence</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>${area}, ${city}, India - ${pincode}</span></p>
+         <div class="map" style="height: 200px; margin-top: 10px;" id="map-${addrDoc.id}"></div>
+         <div class="flex">
+            <p><i class="fas fa-bed"></i><span>3</span></p>
+            <p><i class="fas fa-bath"></i><span>2</span></p>
+            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
+         </div>
+         <a href="view_property.html" class="btn">view property</a>
+      `;
+      return box;
+   }
+
+   async function loadListings() {
+      const boxContainer = document.getElementById('box-container');
+      boxContainer.innerHTML = '<p class="loading">Loading properties...</p>';
+
+      try {
+         const citiesSnapshot = await db.collection('addresses').get();
+         boxContainer.innerHTML = '';
+         
+         for (const cityDoc of citiesSnapshot.docs) {
+            const city = cityDoc.id;
+            const addressesSnapshot = await db.collection('addresses').doc(city)
+               .collection('individual_addresses').get();
+            
+            for (const addrDoc of addressesSnapshot.docs) {
+               const addrData = addrDoc.data();
+               const box = await createPropertyBox(addrData, city, addrDoc);
+               boxContainer.appendChild(box);
+
+               // Initialize map if coordinates exist
+               if (addrData.coordinates) {
+                  const mapDiv = document.getElementById(`map-${addrDoc.id}`);
+                  if (mapDiv && !mapDiv._leaflet_id) {
+                     const map = L.map(mapDiv).setView(
+                        [addrData.coordinates.lat, addrData.coordinates.lon], 
+                        14
+                     );
+                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors'
+                     }).addTo(map);
+                     L.marker([
+                        addrData.coordinates.lat, 
+                        addrData.coordinates.lon
+                     ]).addTo(map)
+                        .bindPopup(`${addrData.area}, ${city}`)
+                        .openPopup();
+                  }
+               }
+            }
          }
-      })
-      .then(res => res.json())
-      .then(data => {
-         if (data.length === 0) return;
-   
-         const { lat, lon } = data[0];
-   
-         // Create map
-         const map = L.map(mapDiv).setView([lat, lon], 14);
-   
-         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-         }).addTo(map);
-   
-         // Add marker
-         L.marker([lat, lon]).addTo(map)
-            .bindPopup(addressText)
-            .openPopup();
-      })
-      .catch(err => {
-         console.log('Map fetch failed:', err);
+      } catch (error) {
+         console.error('Error loading listings:', error);
+         boxContainer.innerHTML = '<p class="error">Error loading properties. Please refresh.</p>';
+      }
+   }
+
+   // Search functionality
+   function executeSearch() {
+      const searchTerm = document.getElementById('location-search').value.toLowerCase().trim();
+      const boxes = document.querySelectorAll('.box');
+      let hasResults = false;
+
+      boxes.forEach(box => {
+         const location = box.querySelector('.location span').textContent.toLowerCase();
+         const name = box.querySelector('.name').textContent.toLowerCase();
+         const matches = location.includes(searchTerm) || name.includes(searchTerm);
+         
+         box.style.display = matches ? 'block' : 'none';
+         if (matches) hasResults = true;
+      });
+
+      const noResultsMsg = document.querySelector('.no-results');
+      if (!hasResults && !noResultsMsg) {
+         const msg = document.createElement('p');
+         msg.className = 'no-results';
+         msg.textContent = 'No properties match your search.';
+         document.getElementById('box-container').appendChild(msg);
+      } else if (noResultsMsg && hasResults) {
+         noResultsMsg.remove();
+      }
+   }
+
+   function resetSearch() {
+      document.getElementById('location-search').value = '';
+      document.querySelectorAll('.box').forEach(box => {
+         box.style.display = 'block';
+      });
+      const noResults = document.querySelector('.no-results');
+      if (noResults) noResults.remove();
+   }
+
+   // Initialize everything
+   document.addEventListener('DOMContentLoaded', () => {
+      loadListings();
+      document.getElementById('search-btn').addEventListener('click', executeSearch);
+      document.getElementById('reset-btn').addEventListener('click', resetSearch);
+      document.getElementById('location-search').addEventListener('keypress', (e) => {
+         if (e.key === 'Enter') executeSearch();
       });
    });
-   </script>
-   <!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  // Update your saveProperty function in listing.html
+// Update your saveProperty function in listing.html
+async function saveProperty(location, propertyType, bhk, budget, event) {
+    event.preventDefault(); // Prevent page reload
+    
+    try {
+        const user = firebase.auth().currentUser;
+        if (!user) {
+            alert("Please login to save properties");
+            window.location.href = "login.html";
+            return;
+        }
 
+        // Add to saved properties
+        await db.collection("users").doc(user.uid).collection("saved").add({
+            location: location,
+            propertyType: propertyType,
+            bhk: bhk,
+            budget: Number(budget) || 0,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            savedAt: new Date().toISOString(),
+            // Add property ID if available
+            propertyId: "prop_" + Math.random().toString(36).substr(2, 9)
+        });
 
+        alert("✓ Property saved successfully!");
+    } catch (error) {
+        console.error("Save error:", error);
+        alert("Failed to save: " + error.message);
+    }
+}
+</script>
 </body>
 </html>
